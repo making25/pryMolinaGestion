@@ -208,6 +208,7 @@
             Controls.Add(btnAgregar);
             Controls.Add(tituloPrincipal);
             Name = "form1";
+            Load += form1_Load;
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
             ResumeLayout(false);
