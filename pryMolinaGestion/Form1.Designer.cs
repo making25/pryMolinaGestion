@@ -31,8 +31,12 @@
             tituloPrincipal = new Label();
             btnBuscar = new Button();
             lblBuscar = new Label();
-            listBox1 = new ListBox();
             groupBox2 = new GroupBox();
+            cmbcate = new ComboBox();
+            txtDatoBuscar = new TextBox();
+            rbtncategoria = new RadioButton();
+            rbtncodigo = new RadioButton();
+            rbtnnombre = new RadioButton();
             btnAgregar = new Button();
             btnModificar = new Button();
             btnEliminar = new Button();
@@ -59,42 +63,87 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(271, 16);
+            btnBuscar.Location = new Point(419, 16);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(99, 32);
             btnBuscar.TabIndex = 4;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // lblBuscar
             // 
             lblBuscar.AutoSize = true;
+            lblBuscar.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             lblBuscar.Location = new Point(33, 20);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(42, 15);
+            lblBuscar.Size = new Size(87, 32);
             lblBuscar.TabIndex = 8;
             lblBuscar.Text = "Buscar";
             // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "Nombre", "Codigo", "Categoria" });
-            listBox1.Location = new Point(107, 20);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(148, 19);
-            listBox1.TabIndex = 10;
-            // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(listBox1);
+            groupBox2.Controls.Add(cmbcate);
+            groupBox2.Controls.Add(txtDatoBuscar);
+            groupBox2.Controls.Add(rbtncategoria);
+            groupBox2.Controls.Add(rbtncodigo);
+            groupBox2.Controls.Add(rbtnnombre);
             groupBox2.Controls.Add(lblBuscar);
             groupBox2.Controls.Add(btnBuscar);
-            groupBox2.Location = new Point(56, 64);
+            groupBox2.Location = new Point(56, 44);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(416, 59);
+            groupBox2.Size = new Size(533, 103);
             groupBox2.TabIndex = 11;
             groupBox2.TabStop = false;
+            // 
+            // cmbcate
+            // 
+            cmbcate.FormattingEnabled = true;
+            cmbcate.Location = new Point(247, 68);
+            cmbcate.Name = "cmbcate";
+            cmbcate.Size = new Size(145, 23);
+            cmbcate.TabIndex = 15;
+            // 
+            // txtDatoBuscar
+            // 
+            txtDatoBuscar.Location = new Point(247, 22);
+            txtDatoBuscar.Name = "txtDatoBuscar";
+            txtDatoBuscar.Size = new Size(145, 23);
+            txtDatoBuscar.TabIndex = 14;
+            // 
+            // rbtncategoria
+            // 
+            rbtncategoria.AutoSize = true;
+            rbtncategoria.Location = new Point(146, 72);
+            rbtncategoria.Name = "rbtncategoria";
+            rbtncategoria.Size = new Size(74, 19);
+            rbtncategoria.TabIndex = 13;
+            rbtncategoria.TabStop = true;
+            rbtncategoria.Text = "categoria";
+            rbtncategoria.UseVisualStyleBackColor = true;
+            // 
+            // rbtncodigo
+            // 
+            rbtncodigo.AutoSize = true;
+            rbtncodigo.Location = new Point(146, 47);
+            rbtncodigo.Name = "rbtncodigo";
+            rbtncodigo.Size = new Size(64, 19);
+            rbtncodigo.TabIndex = 12;
+            rbtncodigo.TabStop = true;
+            rbtncodigo.Text = "Codigo";
+            rbtncodigo.UseVisualStyleBackColor = true;
+            // 
+            // rbtnnombre
+            // 
+            rbtnnombre.AutoSize = true;
+            rbtnnombre.Location = new Point(146, 22);
+            rbtnnombre.Name = "rbtnnombre";
+            rbtnnombre.Size = new Size(67, 19);
+            rbtnnombre.TabIndex = 11;
+            rbtnnombre.TabStop = true;
+            rbtnnombre.Text = "nombre";
+            rbtnnombre.UseVisualStyleBackColor = true;
+            rbtnnombre.CheckedChanged += rbtnnombre_CheckedChanged;
             // 
             // btnAgregar
             // 
@@ -107,7 +156,7 @@
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(303, 373);
+            btnModificar.Location = new Point(233, 373);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(99, 25);
             btnModificar.TabIndex = 6;
@@ -116,7 +165,7 @@
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(497, 373);
+            btnEliminar.Location = new Point(373, 373);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(99, 25);
             btnEliminar.TabIndex = 7;
@@ -125,16 +174,16 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(334, 178);
+            textBox1.Location = new Point(274, 189);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 114);
+            textBox1.Size = new Size(198, 114);
             textBox1.TabIndex = 12;
             // 
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Location = new Point(334, 150);
+            lblDescripcion.Location = new Point(274, 161);
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(69, 15);
             lblDescripcion.TabIndex = 13;
@@ -193,7 +242,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CornflowerBlue;
-            ClientSize = new Size(658, 450);
+            ClientSize = new Size(622, 433);
             Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
             Controls.Add(txtStock);
@@ -220,7 +269,6 @@
         private Label tituloPrincipal;
         private Button btnBuscar;
         private Label lblBuscar;
-        private ListBox listBox1;
         private GroupBox groupBox2;
         private Button btnAgregar;
         private Button btnModificar;
@@ -233,5 +281,10 @@
         private TextBox txtStock;
         private Label lblPrecio;
         private TextBox txtPrecio;
+        private RadioButton rbtncodigo;
+        private RadioButton rbtnnombre;
+        private TextBox txtDatoBuscar;
+        private RadioButton rbtncategoria;
+        private ComboBox cmbcate;
     }
 }

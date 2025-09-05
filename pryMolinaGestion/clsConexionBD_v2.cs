@@ -25,6 +25,8 @@ namespace pryDiazGestionInventario
         //SqlCommand comandoBaseDatos;
         OleDbCommand comandoBaseDatos;
 
+        OleDbDataReader lectorDataReader;
+
         public string nombreBaseDeDatos;
 
         public void ConectarBD()
@@ -38,7 +40,7 @@ namespace pryDiazGestionInventario
 
                 coneccionBaseDatos.Open();
                 
-                MessageBox.Show("Conectado a " + nombreBaseDeDatos);
+               // MessageBox.Show("Conectado a " + nombreBaseDeDatos);
             }
             catch (Exception error)
             {
@@ -47,5 +49,23 @@ namespace pryDiazGestionInventario
 
         }
 
+        public void cargarCategoria (ComboBox cmbcate)
+        {
+            //creo en memoria el objeto
+            comandoBaseDatos = new OleDbCommand();
+            //cargo la conexion a la base
+            comandoBaseDatos.Connection = coneccionBaseDatos;
+
+            //dar indicaciones 
+            comandoBaseDatos.CommandType = System.Data.CommandType.Text;
+            // sentencia SQL para consultar la base
+            comandoBaseDatos.CommandText = "SELECT marca_nombre FROM productosuno";
+            lectorDataReader = comandoBaseDatos.ExecuteReader();
+
+            while (lectorDataReader.Read()) 
+            {
+                cmbcate.Items.Add(lectorDataReader[0]);
+            }
+        }
     }
 }
