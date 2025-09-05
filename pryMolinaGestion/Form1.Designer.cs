@@ -1,6 +1,6 @@
 ﻿namespace pryMolinaGestion
 {
-    partial class form1
+    partial class gestionInventario
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,7 +31,7 @@
             tituloPrincipal = new Label();
             btnBuscar = new Button();
             lblBuscar = new Label();
-            groupBox2 = new GroupBox();
+            grboxbuscar = new GroupBox();
             cmbcate = new ComboBox();
             txtDatoBuscar = new TextBox();
             rbtncategoria = new RadioButton();
@@ -40,7 +40,7 @@
             btnAgregar = new Button();
             btnModificar = new Button();
             btnEliminar = new Button();
-            textBox1 = new TextBox();
+            txtDescripcion = new TextBox();
             lblDescripcion = new Label();
             lblNombreProducto = new Label();
             txtNombreDelProducto = new TextBox();
@@ -48,14 +48,14 @@
             txtStock = new TextBox();
             lblPrecio = new Label();
             txtPrecio = new TextBox();
-            groupBox2.SuspendLayout();
+            grboxbuscar.SuspendLayout();
             SuspendLayout();
             // 
             // tituloPrincipal
             // 
             tituloPrincipal.AutoSize = true;
             tituloPrincipal.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            tituloPrincipal.Location = new Point(12, 9);
+            tituloPrincipal.Location = new Point(56, 9);
             tituloPrincipal.Name = "tituloPrincipal";
             tituloPrincipal.Size = new Size(245, 32);
             tituloPrincipal.TabIndex = 0;
@@ -63,7 +63,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(419, 16);
+            btnBuscar.Location = new Point(295, 50);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(99, 32);
             btnBuscar.TabIndex = 4;
@@ -75,38 +75,38 @@
             // 
             lblBuscar.AutoSize = true;
             lblBuscar.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblBuscar.Location = new Point(33, 20);
+            lblBuscar.Location = new Point(6, 13);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(87, 32);
             lblBuscar.TabIndex = 8;
             lblBuscar.Text = "Buscar";
             // 
-            // groupBox2
+            // grboxbuscar
             // 
-            groupBox2.Controls.Add(cmbcate);
-            groupBox2.Controls.Add(txtDatoBuscar);
-            groupBox2.Controls.Add(rbtncategoria);
-            groupBox2.Controls.Add(rbtncodigo);
-            groupBox2.Controls.Add(rbtnnombre);
-            groupBox2.Controls.Add(lblBuscar);
-            groupBox2.Controls.Add(btnBuscar);
-            groupBox2.Location = new Point(56, 44);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(533, 103);
-            groupBox2.TabIndex = 11;
-            groupBox2.TabStop = false;
+            grboxbuscar.Controls.Add(cmbcate);
+            grboxbuscar.Controls.Add(txtDatoBuscar);
+            grboxbuscar.Controls.Add(rbtncategoria);
+            grboxbuscar.Controls.Add(rbtncodigo);
+            grboxbuscar.Controls.Add(rbtnnombre);
+            grboxbuscar.Controls.Add(lblBuscar);
+            grboxbuscar.Controls.Add(btnBuscar);
+            grboxbuscar.Location = new Point(56, 44);
+            grboxbuscar.Name = "grboxbuscar";
+            grboxbuscar.Size = new Size(416, 135);
+            grboxbuscar.TabIndex = 11;
+            grboxbuscar.TabStop = false;
             // 
             // cmbcate
             // 
             cmbcate.FormattingEnabled = true;
-            cmbcate.Location = new Point(247, 68);
+            cmbcate.Location = new Point(108, 99);
             cmbcate.Name = "cmbcate";
             cmbcate.Size = new Size(145, 23);
             cmbcate.TabIndex = 15;
             // 
             // txtDatoBuscar
             // 
-            txtDatoBuscar.Location = new Point(247, 22);
+            txtDatoBuscar.Location = new Point(108, 49);
             txtDatoBuscar.Name = "txtDatoBuscar";
             txtDatoBuscar.Size = new Size(145, 23);
             txtDatoBuscar.TabIndex = 14;
@@ -114,7 +114,7 @@
             // rbtncategoria
             // 
             rbtncategoria.AutoSize = true;
-            rbtncategoria.Location = new Point(146, 72);
+            rbtncategoria.Location = new Point(19, 100);
             rbtncategoria.Name = "rbtncategoria";
             rbtncategoria.Size = new Size(74, 19);
             rbtncategoria.TabIndex = 13;
@@ -125,7 +125,7 @@
             // rbtncodigo
             // 
             rbtncodigo.AutoSize = true;
-            rbtncodigo.Location = new Point(146, 47);
+            rbtncodigo.Location = new Point(19, 75);
             rbtncodigo.Name = "rbtncodigo";
             rbtncodigo.Size = new Size(64, 19);
             rbtncodigo.TabIndex = 12;
@@ -136,7 +136,7 @@
             // rbtnnombre
             // 
             rbtnnombre.AutoSize = true;
-            rbtnnombre.Location = new Point(146, 22);
+            rbtnnombre.Location = new Point(19, 50);
             rbtnnombre.Name = "rbtnnombre";
             rbtnnombre.Size = new Size(67, 19);
             rbtnnombre.TabIndex = 11;
@@ -147,43 +147,43 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(104, 373);
+            btnAgregar.Location = new Point(82, 363);
             btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(99, 25);
+            btnAgregar.Size = new Size(99, 29);
             btnAgregar.TabIndex = 5;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             // 
             // btnModificar
             // 
-            btnModificar.Location = new Point(233, 373);
+            btnModificar.Location = new Point(211, 363);
             btnModificar.Name = "btnModificar";
-            btnModificar.Size = new Size(99, 25);
+            btnModificar.Size = new Size(99, 29);
             btnModificar.TabIndex = 6;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.Location = new Point(373, 373);
+            btnEliminar.Location = new Point(351, 363);
             btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(99, 25);
+            btnEliminar.Size = new Size(99, 29);
             btnEliminar.TabIndex = 7;
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtDescripcion
             // 
-            textBox1.Location = new Point(274, 189);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(198, 114);
-            textBox1.TabIndex = 12;
+            txtDescripcion.Location = new Point(274, 221);
+            txtDescripcion.Multiline = true;
+            txtDescripcion.Name = "txtDescripcion";
+            txtDescripcion.Size = new Size(198, 114);
+            txtDescripcion.TabIndex = 12;
             // 
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Location = new Point(274, 161);
+            lblDescripcion.Location = new Point(274, 193);
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(69, 15);
             lblDescripcion.TabIndex = 13;
@@ -192,7 +192,7 @@
             // lblNombreProducto
             // 
             lblNombreProducto.AutoSize = true;
-            lblNombreProducto.Location = new Point(56, 150);
+            lblNombreProducto.Location = new Point(56, 182);
             lblNombreProducto.Name = "lblNombreProducto";
             lblNombreProducto.Size = new Size(122, 15);
             lblNombreProducto.TabIndex = 14;
@@ -200,7 +200,7 @@
             // 
             // txtNombreDelProducto
             // 
-            txtNombreDelProducto.Location = new Point(56, 168);
+            txtNombreDelProducto.Location = new Point(56, 200);
             txtNombreDelProducto.Name = "txtNombreDelProducto";
             txtNombreDelProducto.Size = new Size(179, 23);
             txtNombreDelProducto.TabIndex = 15;
@@ -208,7 +208,7 @@
             // lblStock
             // 
             lblStock.AutoSize = true;
-            lblStock.Location = new Point(56, 205);
+            lblStock.Location = new Point(56, 237);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(36, 15);
             lblStock.TabIndex = 16;
@@ -216,7 +216,7 @@
             // 
             // txtStock
             // 
-            txtStock.Location = new Point(56, 223);
+            txtStock.Location = new Point(56, 255);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(179, 23);
             txtStock.TabIndex = 17;
@@ -224,7 +224,7 @@
             // lblPrecio
             // 
             lblPrecio.AutoSize = true;
-            lblPrecio.Location = new Point(56, 262);
+            lblPrecio.Location = new Point(56, 294);
             lblPrecio.Name = "lblPrecio";
             lblPrecio.Size = new Size(40, 15);
             lblPrecio.TabIndex = 18;
@@ -232,17 +232,17 @@
             // 
             // txtPrecio
             // 
-            txtPrecio.Location = new Point(56, 280);
+            txtPrecio.Location = new Point(56, 312);
             txtPrecio.Name = "txtPrecio";
             txtPrecio.Size = new Size(179, 23);
             txtPrecio.TabIndex = 19;
             // 
-            // form1
+            // gestionInventario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.CornflowerBlue;
-            ClientSize = new Size(622, 433);
+            ClientSize = new Size(549, 433);
             Controls.Add(txtPrecio);
             Controls.Add(lblPrecio);
             Controls.Add(txtStock);
@@ -250,16 +250,16 @@
             Controls.Add(txtNombreDelProducto);
             Controls.Add(lblNombreProducto);
             Controls.Add(lblDescripcion);
-            Controls.Add(textBox1);
+            Controls.Add(txtDescripcion);
             Controls.Add(btnEliminar);
-            Controls.Add(groupBox2);
+            Controls.Add(grboxbuscar);
             Controls.Add(btnModificar);
             Controls.Add(btnAgregar);
             Controls.Add(tituloPrincipal);
-            Name = "form1";
+            Name = "gestionInventario";
             Load += form1_Load;
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
+            grboxbuscar.ResumeLayout(false);
+            grboxbuscar.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -269,11 +269,11 @@
         private Label tituloPrincipal;
         private Button btnBuscar;
         private Label lblBuscar;
-        private GroupBox groupBox2;
+        private GroupBox grboxbuscar;
         private Button btnAgregar;
         private Button btnModificar;
         private Button btnEliminar;
-        private TextBox textBox1;
+        private TextBox txtDescripcion;
         private Label lblDescripcion;
         private Label lblNombreProducto;
         private TextBox txtNombreDelProducto;

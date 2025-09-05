@@ -2,9 +2,9 @@ using pryDiazGestionInventario;
 
 namespace pryMolinaGestion
 {
-    public partial class form1 : Form
+    public partial class gestionInventario : Form
     {
-        public form1()
+        public gestionInventario()
         {
             InitializeComponent();
         }
